@@ -1,0 +1,136 @@
+@import url('./style.css');
+
+#container-estoque{
+    height: 75vh;
+    width: inherit;
+    border-radius: 50px;
+    display: none;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: var(--sombra);
+    background-color: var(--card);
+}
+
+#filtro-estoque{
+    display: none;
+    width: 70vw;
+    height: 64px;
+    right: 0;
+    margin-right: 20px;
+}
+
+#container-filtro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#pesquisa-produto {
+    height: inherit;
+    width: 528px;
+    border-radius: 20px;
+    border: solid 2px #CCCCCC;
+    outline: 0;
+    padding: 15px;
+    font-size: 22px;
+}
+
+#select-categoria { 
+    width: 311px;
+    align-items: center;
+}
+#select-categoria> select{
+    height: inherit;
+    width: inherit;
+    border-radius: 20px;
+    border: solid 2px #CCCCCC;
+    outline: 0;
+    padding: 15px;
+    font-size: 22px;
+    color: #251d1d;
+    margin-left: 10%;
+}
+
+#filtro{
+    display: flex; 
+    align-self: center;
+    justify-content: space-around; 
+    align-items: center;
+    color: var(--primary);
+    width: 120px;
+    margin-left: 10%;
+    font-size: 21px;
+}
+
+table{
+    height: 90%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: #edf0f3f3;
+    height: 55px;
+    border: 0;
+    width: 100%;
+}
+
+table>tbody>tr{
+    border-bottom: 1px solid #e6e3e3;
+}
+
+table>tbody>tr:hover{
+    background-color: var(--border);
+    cursor: default;
+    border-top: 1px solid #e6e3e3;
+}
+
+.reaction-modal {
+    display: none;
+    position: absolute;
+    right: -50px;
+    margin-top: -60px;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    text-align: center;
+  }
+  
+  .reaction-modal span {
+    margin: 0 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .reaction-modal span:hover {
+    transform: scale(1.3);
+    border-bottom: solid 2px #000;
+  }
+
+.img-opcoes{
+    width: 24px;
+    cursor: pointer;
+}
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    justify-self: end;
+}
+#pagination button {
+    padding: 5px;
+    margin: -8px 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&family=Abhaya+Libre:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/estoque.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/tabelaEstoque.js" defer></script>
+    <script src="js/filtro.js" defer></script>
+    <title>Smart Campus</title>
+</head>
+<body>
+    <div id="container-geral">
+        <div id="menu-logo">
+            <div id="logo">
+                <img src="img/fotos/logo.png" alt="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" onclick="trocarConteudo('home')">
+                            <img src="img/icons/Home.png" alt="Home">HOME
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="trocarConteudo('cadastro')">
+                            <img src="img/icons/Cadastro.png" alt="Cadastro">CADASTRO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="trocarConteudo('estoque')">
+                            <img src="img/icons/Estoque.png" alt="Estoque">ESTOQUE
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="conteudo">
+            <div id="filtro-estoque">
+                <div id="container-filtro">
+                <label>
+                    <input id="pesquisa-produto" placeholder="Escreva o nome do produto"/>
+                    <img src="img/icons/search.png" style="margin-left: -50px; cursor: pointer;"/>
+                </label>
+                <div id="select-categoria">
+                    <select >
+                        <option value="null">Selecione a categoria</option>
+                        <option value="alimentacao">Alimentação</option>
+                        <option value="bebida">Bebida</option>
+                        <option value="frutas">Frutas</option>
+                        <option value="limpeza">Limpeza</option>
+                        <option value="higiene">Higiene Pessoal</option>
+                      </select>
+                </div>
+                <div id="filtro">
+                    <img src="img/fotos/filter.png" alt="">
+                    Filtro (6)
+                </div>
+                </div>
+            </div>
+            <!-- Home -->
+            <div id="container-home">
+                <div id="scrool-home">
+                    <h1>Bem-vindo ao SmartCampus</h1>
+                    <p class="txt-missao">
+                        <br>Missão<br>
+                        Prover soluções inovadoras e eficientes para a gestão de estoques de supermercados, minimizando perdas de alimentos, garantindo o controle rigoroso das datas de validade e promovendo uma organização otimizada, com foco na redução de desperdícios e na melhoria contínua dos processos.
+                        
+                        <br><br>Visão<br>
+                        Ser o sistema líder na gestão de estoques de supermercados, reconhecido pela excelência na prevenção de perdas, pelo impacto positivo na sustentabilidade e pela criação de um ambiente mais eficiente e organizado, contribuindo para uma experiência superior aos consumidores e para a rentabilidade dos negócios.
+                        
+                        <br><br>Valores<br>
+                        Sustentabilidade e Responsabilidade: Reduzimos desperdícios e promovemos práticas conscientes na gestão de alimentos.
+                        Eficiência e Organização: Buscamos otimizar processos, melhorando o controle e a organização do estoque.
+                        Comprometimento com o Cliente: Focamos em resultados que agreguem valor e melhorem a experiência do cliente.
+                    </p>
+                    <div id="carrossel-patrocinadores">
+                        <img src="img/fotos/coca-cola.png" alt="">
+                        <img src="img/fotos/bombril.png" alt="">
+                        <img src="img/fotos/sadia.png" alt="">
+                        <img src="img/fotos/camil.png" alt="">
+                        <img src="img/fotos/nestle.png" alt="">
+                        <img src="img/fotos/omo.png" alt="">
+                    </div>
+                    <div id="container-img-apresentacao">
+                        <img src="img/fotos/img-apresatacao.png" alt="">
+                        <div id="container-txt-apresentacao">
+                            <h2>Automatize seu controle de estoque e ganhe mais tempo!</h2>
+                            <p>Nosso sistema de gestão de estoque permite cadastrar facilmente seus produtos, oferecendo uma visão completa e organizada do seu inventário. Você pode visualizar todos os itens cadastrados, com a possibilidade de filtrar por nome ou categoria, facilitando a localização dos produtos. Além disso, é possível verificar a data de vencimento, o valor de cada produto e a quantidade disponível de forma rápida e prática, garantindo um controle eficiente e atualizado do seu estoque.</p>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <!-- Cadastro -->
+            <div id="container-cadastro">
+                <h1>CADASTRO DE PRODUTOS</h1>
+                <div id="container-label">
+                    <div id="left">
+                        <label>
+                            Nome Produto
+                            <input type="text" placeholder="Escreva o nome">
+                        </label>
+                        <label>
+                            Categoria
+                            <select name="category" id="categoria">
+                                <option value="null">Selecione a categoria</option>
+                                <option value="alimentacao">Alimentação</option>
+                                <option value="bebida">Bebida</option>
+                                <option value="frutas">Frutas</option>
+                                <option value="limpeza">Limpeza</option>
+                                <option value="higiene">Higiene Pessoal</option>
+                              </select>
+                        </label>
+                        <label>
+                            Observação
+                            <input type="text" placeholder="Escreva uma observação">
+                        </label>
+                    </div>
+                    <div id="right">
+                        <label>
+                           Valor da Unidade
+                            <input type="text" placeholder="R$">
+                        </label>
+                        <label>
+                            Data de Validade
+                            <input type="date" placeholder="Escreva o nome">
+                        </label>
+                        <label>
+                            Quantidade
+                            <input type="number">
+                        </label>
+                    </div>
+                </div>
+                <div id="container-btn">
+                    <div class="btn" style="background-color: red;">
+                        CANCELAR
+                        <img src="img/fotos/Close.png" alt="">
+                    </div>
+                    <div class="btn" style="background-color: rgb(36, 232, 36);">
+                        CADASTRAR
+                    <img src="img/fotos/Checkmark.png" alt="">
+                </div>
+                </div>
+            </div>
+            <!-- Estoque -->
+            <div id="container-estoque">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Categoria</th>
+                            <th>Data Validade</th>
+                            <th>Valor Unidade</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-list">
+                        
+                    </tbody>
+                </table>
+                <div id="pagination">
+                    <span id="pageNumber">Página 1</span>
+                    <button id="prevPage">
+                        <img src="img/fotos/seta-esquerda.png" alt="">
+                    </button>
+                    <button id="nextPage">
+                        <img src="img/fotos/seta-direita.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
