@@ -1,20 +1,19 @@
+let contadorId = 1;  // Inicializamos o contador de IDs
+
 const produtos = [
-    { nome: 'Coca-Cola sem açúcar', quantidade: 16, categoria: 'Bebida', validade: '12/12/2026', valor: 'R$ 30,90' },
-    { nome: 'Arroz Integral', quantidade: 5, categoria: 'Alimento', validade: '05/11/2025', valor: 'R$ 20,50' },
-    { nome: 'Macbook Pro 16”', quantidade: 1, categoria: 'Eletrônicos', validade: '20/08/2025', valor: 'R$ 14.499,00' },
-    { nome: 'Café Torrado', quantidade: 500, categoria: 'Alimento', validade: '18/05/2024', valor: 'R$ 12,80' },
-    { nome: 'Shampoo L\'Oréal', quantidade: 350, categoria: 'Higiene Pessoal', validade: '22/02/2026', valor: 'R$ 35,90' },
-    { nome: 'Fone de Ouvido JBL', quantidade: 1, categoria: 'Eletrônicos', validade: '10/10/2025', valor: 'R$ 299,00' },
-    { nome: 'Suco de Laranja Natural', quantidade: 1, categoria: 'Bebida', validade: '01/04/2024', valor: 'R$ 7,90' },
-    { nome: 'Suco de Abacaxi Industrializado', quantidade: 15, categoria: 'Bebida', validade: '01/04/2024', valor: 'R$ 7,90' },
-    { nome: 'Sabonete Dove', quantidade: 90, categoria: 'Higiene Pessoal', validade: '30/11/2025', valor: 'R$ 4,50' },
-    { nome: 'Camiseta Nike', quantidade: 1, categoria: 'Vestuário', validade: '15/07/2025', valor: 'R$ 119,90' },
-    { nome: 'Tênis Adidas', quantidade: 2, categoria: 'Vestuário', validade: '10/10/2026', valor: 'R$ 299,90' },
-    { nome: 'Suco de Maça Natural', quantidade: 1, categoria: 'Bebida', validade: '01/04/2024', valor: 'R$ 7,90' },
-    { nome: 'Lixeira de Cozinha', quantidade: 1, categoria: 'Casa', validade: '20/05/2027', valor: 'R$ 49,90' },
-    { nome: 'Blusa Hering', quantidade: 1, categoria: 'Vestuário', validade: '05/01/2026', valor: 'R$ 69,90' },
-    { nome: 'Suco de Goiaba Natural', quantidade: 10, categoria: 'Bebida', validade: '01/04/2024', valor: 'R$ 7,90' },
-    { nome: 'Mochila de Viagem', quantidade: 1, categoria: 'Acessórios', validade: '10/08/2025', valor: 'R$ 149,00' }
+    { id: contadorId++, nome: 'Coca-Cola sem açúcar', quantidade: 16, categoria: 'Bebida', validade: '12/12/2026', valor: 'R$ 30,90', observacao: 'Sem açúcar', dataCadastro: new Date().toLocaleDateString() },
+    { id: contadorId++, nome: 'Arroz Integral', quantidade: 5, categoria: 'Alimento', validade: '05/11/2025', valor: 'R$ 20,50', observacao: 'Integral', dataCadastro: new Date().toLocaleDateString() },
+    { id: contadorId++, nome: 'Macbook Pro 16”', quantidade: 1, categoria: 'Eletrônicos', validade: '20/08/2025', valor: 'R$ 14.499,00', observacao: 'Modelo 2023', dataCadastro: new Date().toLocaleDateString() },
+    { id: contadorId++, nome: 'Café Torrado', quantidade: 500, categoria: 'Alimento', validade: '18/05/2024', valor: 'R$ 12,80', observacao: 'Produto orgânico', dataCadastro: new Date().toLocaleDateString() },
+    { id: contadorId++, nome: 'Shampoo L\'Oréal', quantidade: 350, categoria: 'Higiene Pessoal', validade: '22/02/2026', valor: 'R$ 35,90', observacao: 'Para cabelo seco', dataCadastro: new Date().toLocaleDateString() },
+    { id: contadorId++, nome: 'Fone de Ouvido JBL', quantidade: 1, categoria: 'Eletrônicos', validade: '10/10/2025', valor: 'R$ 299,00', observacao: 'Com cancelamento de ruído', dataCadastro: new Date().toLocaleDateString() },
+    { id: contadorId++, nome: 'Suco de Laranja Natural', quantidade: 1, categoria: 'Bebida', validade: '01/04/2024', valor: 'R$ 7,90', observacao: 'Sem conservantes', dataCadastro: new Date().toLocaleDateString() },
+    { id: contadorId++, nome: 'Suco de Abacaxi Industrializado', quantidade: 15, categoria: 'Bebida', validade: '01/04/2024', valor: 'R$ 7,90', observacao: 'Com açúcar', dataCadastro: new Date().toLocaleDateString() },
+    { id: contadorId++, nome: 'Sabonete Dove', quantidade: 90, categoria: 'Higiene Pessoal', validade: '30/11/2025', valor: 'R$ 4,50', observacao: 'Hidratante', dataCadastro: new Date().toLocaleDateString() },
+    { id: contadorId++, nome: 'Suco de Maça Natural', quantidade: 13, categoria: 'Bebida', validade: '01/04/2024', valor: 'R$ 7,90', observacao: 'Sem conservantes', dataCadastro: new Date().toLocaleDateString() },
+    { id: contadorId++, nome: 'Camiseta Nike', quantidade: 1, categoria: 'Vestuário', validade: '15/07/2025', valor: 'R$ 119,90', observacao: 'Tamanho M', dataCadastro: new Date().toLocaleDateString() },
+    { id: contadorId++, nome: 'Suco de Uva Natural', quantidade: 10, categoria: 'Bebida', validade: '01/04/2024', valor: 'R$ 7,90', observacao: 'Sem conservantes', dataCadastro: new Date().toLocaleDateString() },
+    { id: contadorId++, nome: 'Tênis Adidas', quantidade: 2, categoria: 'Vestuário', validade: '10/10/2026', valor: 'R$ 299,90', observacao: 'Tênis casual', dataCadastro: new Date().toLocaleDateString() }
 ];
 
 const itensPorPagina = 8;
@@ -42,13 +41,13 @@ function carregarProdutos() {
             <td class="img-opcoes">
                 <img src="img/icons/opcoes.png" alt="Opções" class="like-btn" data-modal="${modalId}" />
                 <div class="reaction-modal" id="${modalId}">
-                    <span>
+                    <span class="editar" data-id="${produto.id}">
                       Editar
-                       <img src="img/icons/edit-3.png" alt="">
+                       <img src="img/icons/edit-3.png" alt="Editar">
                     </span>
-                    <span>
+                    <span class="excluir" data-id="${produto.id}">
                         Excluir
-                        <img src="img/icons/trash-2.png" alt="">
+                        <img src="img/icons/trash-2.png" alt="Excluir">
                     </span>
                 </div>
             </td>
@@ -56,21 +55,26 @@ function carregarProdutos() {
 
         tbody.appendChild(tr);
 
-        // Adicionar os eventos para cada botão "Opções"
+        // Adicionar evento de edição
+        const editarBtn = tr.querySelector('.editar');
+        editarBtn.addEventListener('click', () => {
+            const produtoId = editarBtn.getAttribute('data-id');
+            const produto = produtos.find(p => p.id == produtoId);
+            preencherFormularioEditar(produto);
+        });
+
+        // Mostrar o modal ao passar o mouse sobre o botão "Opções"
         const likeBtn = tr.querySelector('.like-btn');
         const reactionModal = tr.querySelector(`#${modalId}`);
 
-        // Mostrar o modal ao passar o mouse sobre o botão "Opções"
         likeBtn.addEventListener('mouseenter', () => {
             reactionModal.style.display = 'block';
         });
 
-        // Mostrar o modal ao passar o mouse sobre o próprio modal de reações
         reactionModal.addEventListener('mouseenter', () => {
             reactionModal.style.display = 'block';
         });
 
-        // Esconder o modal quando o mouse sair do botão e do modal de reações
         likeBtn.addEventListener('mouseleave', () => {
             setTimeout(() => {
                 if (!reactionModal.matches(':hover')) {
@@ -82,18 +86,23 @@ function carregarProdutos() {
         reactionModal.addEventListener('mouseleave', () => {
             reactionModal.style.display = 'none';
         });
+
+        // Adicionar evento de exclusão
+        const excluirBtn = tr.querySelector('.excluir');
+        excluirBtn.addEventListener('click', () => {
+            mostrarModalConfirmacao(excluirBtn.getAttribute('data-id'));
+        });
     });
 
-    // Atualizar o número da página no formato "1/2"
+    // Atualizar o número da página
     const totalPaginas = Math.ceil(produtosFiltrados.length / itensPorPagina);
     document.getElementById('pageNumber').textContent = `${paginaAtual}/${totalPaginas}`;
 }
 
-// Função para controlar a navegação entre páginas
+// Função de navegação de páginas
 function controlarPaginacao() {
     const totalPaginas = Math.ceil(produtosFiltrados.length / itensPorPagina);
 
-    // Navegação para a página anterior
     document.getElementById('prevPage').addEventListener('click', () => {
         if (paginaAtual > 1) {
             paginaAtual--;
@@ -101,7 +110,6 @@ function controlarPaginacao() {
         }
     });
 
-    // Navegação para a próxima página
     document.getElementById('nextPage').addEventListener('click', () => {
         if (paginaAtual < totalPaginas) {
             paginaAtual++;
@@ -110,20 +118,35 @@ function controlarPaginacao() {
     });
 }
 
-// Função para filtrar produtos com base na pesquisa
-function filtrarProdutos() {
-    const pesquisaInput = document.getElementById('pesquisa-produto').value.toLowerCase();
-    produtosFiltrados = produtos.filter(produto => produto.nome.toLowerCase().includes(pesquisaInput));
-    paginaAtual = 1;  // Resetar para a primeira página
-    carregarProdutos();
-    controlarPaginacao();
+// Função para mostrar a modal de confirmação
+function mostrarModalConfirmacao(idProduto) {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.innerHTML = `
+        <div class="modal-content">
+            <p>Tem certeza que deseja excluir esse produto?</p>
+            <button id="confirmarSim">Sim</button>
+            <button id="confirmarNao">Não</button>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    // Adicionar eventos para os botões de confirmação
+    document.getElementById('confirmarSim').addEventListener('click', () => {
+        excluirProduto(idProduto);
+        document.body.removeChild(modal);
+    });
+
+    document.getElementById('confirmarNao').addEventListener('click', () => {
+        document.body.removeChild(modal);
+    });
 }
 
-// Adicionar evento de input no campo de pesquisa
-document.getElementById('pesquisa-produto').addEventListener('input', filtrarProdutos);
+// Função para excluir o produto
+function excluirProduto(id) {
+    // Remove o produto com o id específico
+    produtosFiltrados = produtosFiltrados.filter(p => p.id !== parseInt(id));
+    carregarProdutos();  // Atualiza a lista de produtos
+    alert('Produto excluído com sucesso!');
+}
 
-// Carregar os produtos e configurar a navegação ao carregar a página
-window.onload = () => {
-    carregarProdutos();
-    controlarPaginacao();
-};

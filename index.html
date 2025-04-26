@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="stylesheet" href="css/estoque.css">
-    <script src="js/menu.js" defer></script>
     <script src="js/tabelaEstoque.js" defer></script>
     <script src="js/filtro.js" defer></script>
+    <script src="js/menu.js" defer></script>
     <title>Smart Campus</title>
 </head>
 <body>
@@ -49,18 +49,13 @@
                     <img src="img/icons/search.png" style="margin-left: -50px; cursor: pointer;"/>
                 </label>
                 <div id="select-categoria">
-                    <select >
+                    <select id="categoria-select" >
                         <option value="null">Selecione a categoria</option>
-                        <option value="alimentacao">Alimentação</option>
-                        <option value="bebida">Bebida</option>
-                        <option value="frutas">Frutas</option>
-                        <option value="limpeza">Limpeza</option>
-                        <option value="higiene">Higiene Pessoal</option>
                       </select>
                 </div>
                 <div id="filtro">
                     <img src="img/fotos/filter.png" alt="">
-                    Filtro (6)
+                    Filtro (2)
                 </div>
                 </div>
             </div>
@@ -80,16 +75,8 @@
                         Eficiência e Organização: Buscamos otimizar processos, melhorando o controle e a organização do estoque.
                         Comprometimento com o Cliente: Focamos em resultados que agreguem valor e melhorem a experiência do cliente.
                     </p>
-                    <div id="carrossel-patrocinadores">
-                        <img src="img/fotos/coca-cola.png" alt="">
-                        <img src="img/fotos/bombril.png" alt="">
-                        <img src="img/fotos/sadia.png" alt="">
-                        <img src="img/fotos/camil.png" alt="">
-                        <img src="img/fotos/nestle.png" alt="">
-                        <img src="img/fotos/omo.png" alt="">
-                    </div>
                     <div id="container-img-apresentacao">
-                        <img src="img/fotos/img-apresatacao.png" alt="">
+                        <img src="img/fotos/apresentacao.png" alt="" >
                         <div id="container-txt-apresentacao">
                             <h2>Automatize seu controle de estoque e ganhe mais tempo!</h2>
                             <p>Nosso sistema de gestão de estoque permite cadastrar facilmente seus produtos, oferecendo uma visão completa e organizada do seu inventário. Você pode visualizar todos os itens cadastrados, com a possibilidade de filtrar por nome ou categoria, facilitando a localização dos produtos. Além disso, é possível verificar a data de vencimento, o valor de cada produto e a quantidade disponível de forma rápida e prática, garantindo um controle eficiente e atualizado do seu estoque.</p>
@@ -104,36 +91,36 @@
                     <div id="left">
                         <label>
                             Nome Produto
-                            <input type="text" placeholder="Escreva o nome">
+                            <input type="text" placeholder="Escreva o nome" name="nome">
                         </label>
                         <label>
                             Categoria
                             <select name="category" id="categoria">
                                 <option value="null">Selecione a categoria</option>
-                                <option value="alimentacao">Alimentação</option>
+                                <!-- <option value="alimentacao">Alimentação</option>
                                 <option value="bebida">Bebida</option>
                                 <option value="frutas">Frutas</option>
                                 <option value="limpeza">Limpeza</option>
-                                <option value="higiene">Higiene Pessoal</option>
-                              </select>
+                                <option value="higiene">Higiene Pessoal</option> -->
+                            </select>
                         </label>
                         <label>
                             Observação
-                            <input type="text" placeholder="Escreva uma observação">
+                            <input type="text" placeholder="Escreva uma observação" name="observacao">
                         </label>
                     </div>
                     <div id="right">
                         <label>
-                           Valor da Unidade
-                            <input type="text" placeholder="R$">
+                            Valor da Unidade
+                            <input type="text" placeholder="R$" name="valor">
                         </label>
                         <label>
                             Data de Validade
-                            <input type="date" placeholder="Escreva o nome">
+                            <input type="date" name="dataCadastro" />
                         </label>
                         <label>
                             Quantidade
-                            <input type="number">
+                            <input type="number" name="quantidade">
                         </label>
                     </div>
                 </div>
@@ -142,10 +129,10 @@
                         CANCELAR
                         <img src="img/fotos/Close.png" alt="">
                     </div>
-                    <div class="btn" style="background-color: rgb(36, 232, 36);">
-                        CADASTRAR
-                    <img src="img/fotos/Checkmark.png" alt="">
-                </div>
+                    <div class="btn" id="btn-cadastrar" style="background-color: rgb(36, 232, 36);">
+                        <span>CADASTRAR</span>
+                        <img src="img/fotos/Checkmark.png" alt="">
+                    </div>
                 </div>
             </div>
             <!-- Estoque -->
@@ -177,5 +164,6 @@
             </div>
         </div>
     </div>
+    <script src="js/editar.js"></script>
 </body>
 </html> 
