@@ -1,4 +1,4 @@
-let contadorId = 1;  // Inicializamos o contador de IDs
+let contadorId = 1;  
 
 const produtos = [
     { id: contadorId++, nome: 'Coca-Cola sem açúcar', quantidade: 16, categoria: 'Bebida', validade: '12/12/2026', valor: 'R$ 30,90', observacao: 'Sem açúcar', dataCadastro: new Date().toLocaleDateString() },
@@ -19,7 +19,7 @@ const produtos = [
 const itensPorPagina = 8;
 let paginaAtual = 1;
 
-let produtosFiltrados = [...produtos]; // Inicializa com todos os produtos
+let produtosFiltrados = [...produtos]; 
 
 function carregarProdutos() {
     const tbody = document.getElementById('product-list');
@@ -55,7 +55,6 @@ function carregarProdutos() {
 
         tbody.appendChild(tr);
 
-        // Adicionar evento de edição
         const editarBtn = tr.querySelector('.editar');
         editarBtn.addEventListener('click', () => {
             const produtoId = editarBtn.getAttribute('data-id');
@@ -63,7 +62,6 @@ function carregarProdutos() {
             preencherFormularioEditar(produto);
         });
 
-        // Mostrar o modal ao passar o mouse sobre o botão "Opções"
         const likeBtn = tr.querySelector('.like-btn');
         const reactionModal = tr.querySelector(`#${modalId}`);
 
@@ -87,19 +85,16 @@ function carregarProdutos() {
             reactionModal.style.display = 'none';
         });
 
-        // Adicionar evento de exclusão
         const excluirBtn = tr.querySelector('.excluir');
         excluirBtn.addEventListener('click', () => {
             mostrarModalConfirmacao(excluirBtn.getAttribute('data-id'));
         });
     });
 
-    // Atualizar o número da página
     const totalPaginas = Math.ceil(produtosFiltrados.length / itensPorPagina);
     document.getElementById('pageNumber').textContent = `${paginaAtual}/${totalPaginas}`;
 }
 
-// Função de navegação de páginas
 function controlarPaginacao() {
     const totalPaginas = Math.ceil(produtosFiltrados.length / itensPorPagina);
 
@@ -118,7 +113,6 @@ function controlarPaginacao() {
     });
 }
 
-// Função para mostrar a modal de confirmação
 function mostrarModalConfirmacao(idProduto) {
     const modal = document.createElement('div');
     modal.classList.add('modal');
@@ -131,7 +125,6 @@ function mostrarModalConfirmacao(idProduto) {
     `;
     document.body.appendChild(modal);
 
-    // Adicionar eventos para os botões de confirmação
     document.getElementById('confirmarSim').addEventListener('click', () => {
         excluirProduto(idProduto);
         document.body.removeChild(modal);
@@ -142,11 +135,9 @@ function mostrarModalConfirmacao(idProduto) {
     });
 }
 
-// Função para excluir o produto
 function excluirProduto(id) {
-    // Remove o produto com o id específico
     produtosFiltrados = produtosFiltrados.filter(p => p.id !== parseInt(id));
-    carregarProdutos();  // Atualiza a lista de produtos
+    carregarProdutos();  
     alert('Produto excluído com sucesso!');
 }
 
